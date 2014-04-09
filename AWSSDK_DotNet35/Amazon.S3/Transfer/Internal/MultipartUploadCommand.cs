@@ -190,7 +190,7 @@ namespace Amazon.S3.Transfer.Internal
             uploadRequest.StreamUploadProgressCallback += progressHandler.OnTransferProgress;
             uploadRequest.BeforeRequestEvent += this.RequestEventHandler;
 
-#if BCL
+#if BCL || __MOBILE__
             if (this._fileTransporterRequest.IsSetFilePath())
             {
                 uploadRequest.FilePosition = filePosition;

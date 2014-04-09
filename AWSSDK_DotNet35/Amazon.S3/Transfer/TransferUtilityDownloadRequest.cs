@@ -35,7 +35,7 @@ namespace Amazon.S3.Transfer
     /// </summary>
     public partial class TransferUtilityDownloadRequest : BaseDownloadRequest
     {
-#if BCL
+			#if BCL || __MOBILE__
         /// <summary>
         /// 	Get or sets the file path location of where the
         /// 	downloaded Amazon S3 object will be written to.

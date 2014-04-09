@@ -13,7 +13,7 @@ using System.Security.Cryptography;
 namespace ThirdParty.MD5
 {
 
-#if SILVERLIGHT
+#if SILVERLIGHT || __MOBILE__
     public class MD5Managed : HashAlgorithm
 #else
 public class MD5Managed : MD5

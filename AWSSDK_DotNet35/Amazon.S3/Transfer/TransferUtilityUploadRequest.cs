@@ -341,7 +341,7 @@ namespace Amazon.S3.Transfer
             get
             {
                 long length;
-#if BCL
+#if BCL  || __MOBILE__
                 if (this.IsSetFilePath())
                 {
                     FileInfo fileInfo = new FileInfo(this.FilePath);

@@ -274,7 +274,7 @@ namespace Amazon.S3.Model
             return this.serverSideEncryption != null;
         }
 
-#if BCL
+#if BCL || __MOBILE__
         /// <summary>
         /// Writes the content of the ResponseStream a file indicated by the filePath argument.
         /// </summary>
