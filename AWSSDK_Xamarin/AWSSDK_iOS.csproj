@@ -9543,4 +9543,10 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <ItemGroup>
+    <EmbeddedResource Include="..\AWSSDK_DotNet35\endpoints.xml">
+      <Link>endpoints.xml</Link>
+      <LogicalName>AWSSDK.endpoints.xml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

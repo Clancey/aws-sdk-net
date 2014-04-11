@@ -9544,4 +9544,10 @@
     <None Include="README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="..\AWSSDK_DotNet35\endpoints.xml">
+      <Link>endpoints.xml</Link>
+      <LogicalName>AWSSDK.endpoints.xml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
