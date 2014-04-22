@@ -5,7 +5,7 @@ using MonoTouch.UIKit;
 using Amazon.SimpleNotificationService;
 using Amazon.SimpleNotificationService.Model;
 
-namespace AWSSDK_iOS.SnsSample
+namespace AWSSDK_iOS.Sns.Sample
 {
 	public class EmailTextViewDelegate : UITextViewDelegate
 	{

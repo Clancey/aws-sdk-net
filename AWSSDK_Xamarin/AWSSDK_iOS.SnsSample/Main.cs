@@ -4,7 +4,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace AWSSDK_iOS.SnsSample
+namespace AWSSDK_iOS.Sns.Sample
 {
 	public class Application
 	{
