@@ -6,9 +6,9 @@ using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.S3.Util;
 
-namespace AWSSDK_iOS.S3.Sample
+namespace S3.Sample
 {
-	public partial class AWSSDK_iOS_S3_SampleViewController : UIViewController
+	public partial class S3SampleViewController : UIViewController
 	{
 		const string ACCESS_KEY = "";
 		const string SECRET_KEY = "";
@@ -16,7 +16,7 @@ namespace AWSSDK_iOS.S3.Sample
 
 		string bucketName;
 
-		public AWSSDK_iOS_S3_SampleViewController () : base ("AWSSDK_iOS_S3_SampleViewController", null)
+		public S3SampleViewController () : base ("S3SampleViewController", null)
 		{
 		}
 

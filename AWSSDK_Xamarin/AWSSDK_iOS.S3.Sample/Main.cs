@@ -4,7 +4,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace AWSSDK_iOS.S3.Sample
+namespace S3.Sample
 {
 	public class Application
 	{

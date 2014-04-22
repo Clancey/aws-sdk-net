@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>AWSSDK_iOS.Sns.Sample</string>
+	<string>SNSSample</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.AWSSDK_iOS.SnsSample</string>
+	<string>com.your-company.SNS.Sample</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>S3.iOS.Sample</string>
+	<string>S3.Sample</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.S3iOSSample</string>
+	<string>com.your-company.S3.Sample</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

@@ -4,7 +4,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace AWSSDK_iOS.Sample.SimpleDB
+namespace SimpleDB.Sample
 {
 	public class Application
 	{

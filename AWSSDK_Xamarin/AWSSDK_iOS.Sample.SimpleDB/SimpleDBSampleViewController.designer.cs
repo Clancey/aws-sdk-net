@@ -5,10 +5,10 @@
 //
 using MonoTouch.Foundation;
 
-namespace AWSSDK_iOS.Sample.DynamoDB
+namespace SimpleDB.Sample
 {
-	[Register ("AWSSDK_iOS_Sample_DynamoDBViewController")]
-	partial class AWSSDK_iOS_Sample_DynamoDBViewController
+	[Register ("SimpleDBSampleViewController")]
+	partial class SimpleDBSampleViewController
 	{
 		void ReleaseDesignerOutlets ()
 		{

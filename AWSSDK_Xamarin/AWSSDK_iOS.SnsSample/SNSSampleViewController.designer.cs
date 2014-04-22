@@ -5,10 +5,10 @@
 //
 using MonoTouch.Foundation;
 
-namespace AWSSDK_iOS.SnsSample
+namespace SNS.Sample
 {
-	[Register ("AWSSDK_iOS_SnsSampleViewController")]
-	partial class AWSSDK_iOS_SnsSampleViewController
+	[Register ("SNSSampleViewController")]
+	partial class SNSSampleViewController
 	{
 		void ReleaseDesignerOutlets ()
 		{

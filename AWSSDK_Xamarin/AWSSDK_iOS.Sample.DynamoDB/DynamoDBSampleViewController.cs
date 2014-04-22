@@ -9,7 +9,7 @@ using Amazon.DynamoDBv2;
 using System.Collections;
 using Amazon.DynamoDBv2.DocumentModel;
 
-namespace AWSSDK_iOS.Sample.DynamoDB
+namespace DynamoDB.Sample
 {
 	[DynamoDBTable("Movies")]
 	public class Movie
@@ -63,12 +63,12 @@ namespace AWSSDK_iOS.Sample.DynamoDB
 	}
 
 	// http://aws.amazon.com/articles/SDKs/.NET/2790257258340776
-	public partial class AWSSDK_iOS_Sample_DynamoDBViewController : UIViewController
+	public partial class DynamoDBSampleViewController : UIViewController
 	{
 		const string ACCESS_KEY = "";
 		const string SECRET_KEY = "";
 
-		public AWSSDK_iOS_Sample_DynamoDBViewController () : base ("AWSSDK_iOS_Sample_DynamoDBViewController", null)
+		public DynamoDBSampleViewController () : base ("DynamoDBSampleViewController", null)
 		{
 		}
 

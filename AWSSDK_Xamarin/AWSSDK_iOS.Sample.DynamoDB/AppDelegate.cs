@@ -4,7 +4,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace AWSSDK_iOS.Sample.DynamoDB
+namespace DynamoDB.Sample
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
 	// User Interface of the application, as well as listening (and optionally responding) to
@@ -14,7 +14,7 @@ namespace AWSSDK_iOS.Sample.DynamoDB
 	{
 		// class-level declarations
 		UIWindow window;
-		AWSSDK_iOS_Sample_DynamoDBViewController viewController;
+		DynamoDBSampleViewController viewController;
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this
 		// method you should instantiate the window, load the UI into it and then make the window
@@ -26,7 +26,7 @@ namespace AWSSDK_iOS.Sample.DynamoDB
 		{
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			
-			viewController = new AWSSDK_iOS_Sample_DynamoDBViewController ();
+			viewController = new DynamoDBSampleViewController ();
 			window.RootViewController = viewController;
 			window.MakeKeyAndVisible ();
 			

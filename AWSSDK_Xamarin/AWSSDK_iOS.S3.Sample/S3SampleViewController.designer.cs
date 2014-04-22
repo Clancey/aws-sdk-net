@@ -7,10 +7,10 @@
 using MonoTouch.Foundation;
 using System.CodeDom.Compiler;
 
-namespace AWSSDK_iOS.S3.Sample
+namespace S3.Sample
 {
-	[Register ("AWSSDK_iOS_S3_SampleViewController")]
-	partial class AWSSDK_iOS_S3_SampleViewController
+	[Register ("S3SampleViewController")]
+	partial class S3SampleViewController
 	{
 		[Outlet]
 		MonoTouch.UIKit.UIButton CreateButton { get; set; }

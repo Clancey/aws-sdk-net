@@ -5,7 +5,7 @@ using MonoTouch.UIKit;
 using Amazon.SimpleNotificationService;
 using Amazon.SimpleNotificationService.Model;
 
-namespace AWSSDK_iOS.Sns.Sample
+namespace SNS.Sample
 {
 	public class EmailTextViewDelegate : UITextViewDelegate
 	{
@@ -19,7 +19,7 @@ namespace AWSSDK_iOS.Sns.Sample
 		}
 	}
 
-	public partial class AWSSDK_iOS_SnsSampleViewController : UIViewController
+	public partial class SNSSampleViewController : UIViewController
 	{
 		const string ACCESS_KEY = "";
 		const string SECRET_KEY = "";
@@ -35,7 +35,7 @@ namespace AWSSDK_iOS.Sns.Sample
 
 		IAmazonSimpleNotificationService snsClient = new AmazonSimpleNotificationServiceClient(ACCESS_KEY, SECRET_KEY, Amazon.RegionEndpoint.USWest1);
 
-		public AWSSDK_iOS_SnsSampleViewController () : base ("AWSSDK_iOS_SnsSampleViewController", null)
+		public SNSSampleViewController () : base ("SNSSampleViewController", null)
 		{
 		}
 

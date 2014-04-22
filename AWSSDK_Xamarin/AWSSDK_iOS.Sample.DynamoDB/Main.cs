@@ -4,7 +4,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace AWSSDK_iOS.Sample.DynamoDB
+namespace DynamoDB.Sample
 {
 	public class Application
 	{

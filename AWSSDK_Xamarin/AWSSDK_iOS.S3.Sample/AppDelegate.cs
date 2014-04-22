@@ -4,7 +4,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace AWSSDK_iOS.S3.Sample
+namespace S3.Sample
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
 	// User Interface of the application, as well as listening (and optionally responding) to
@@ -26,7 +26,7 @@ namespace AWSSDK_iOS.S3.Sample
 		{
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			
-			viewController = new UINavigationController(new AWSSDK_iOS_S3_SampleViewController ());
+			viewController = new UINavigationController(new S3SampleViewController ());
 			window.RootViewController = viewController;
 			window.MakeKeyAndVisible ();
 			
