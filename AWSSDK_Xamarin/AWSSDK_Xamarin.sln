@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSSDK_Android.Sample", "AW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSSDK_iOS.SnsSample", "AWSSDK_iOS.SnsSample\AWSSDK_iOS.SnsSample.csproj", "{E522B3C1-6323-4340-B285-241ADD54D0BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSSDK_Android.S3.Sample", "AWSSDK_Android.S3.Sample\AWSSDK_Android.S3.Sample.csproj", "{7E56FFCA-3F49-4A5E-AF98-9A9381999149}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,22 @@ Global
 		{30B51135-B4D3-4BF0-9E32-E3E2F5BBE6F5}.Release|iPhone.Build.0 = Release|Any CPU
 		{30B51135-B4D3-4BF0-9E32-E3E2F5BBE6F5}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{30B51135-B4D3-4BF0-9E32-E3E2F5BBE6F5}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Release|iPhone.Build.0 = Release|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{8CDBD209-062C-455C-AA16-9BD46D0F37B2}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
 		{8CDBD209-062C-455C-AA16-9BD46D0F37B2}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
 		{8CDBD209-062C-455C-AA16-9BD46D0F37B2}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
@@ -91,8 +109,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8CDBD209-062C-455C-AA16-9BD46D0F37B2} = {12642A31-1BBB-424E-A751-93249D9052BC}
 		{E522B3C1-6323-4340-B285-241ADD54D0BB} = {12642A31-1BBB-424E-A751-93249D9052BC}
+		{7E56FFCA-3F49-4A5E-AF98-9A9381999149} = {12642A31-1BBB-424E-A751-93249D9052BC}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = AWSSDK_iOS.csproj
+		StartupItem = AWSSDK_Android.S3.Sample\AWSSDK_Android.S3.Sample.csproj
 	EndGlobalSection
 EndGlobal
