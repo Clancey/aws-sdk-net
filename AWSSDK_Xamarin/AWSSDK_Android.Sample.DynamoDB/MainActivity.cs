@@ -11,9 +11,10 @@ using Amazon.DynamoDBv2.DataModel;
 using Amazon.DynamoDBv2;
 using System.Collections;
 using Amazon.DynamoDBv2.DocumentModel;
+using Amazon.DynamoDBv2;
 
 
-namespace AWSSDK_Android.Sample.DynamoDB
+namespace DynamoDB.Sample
 {
 	[DynamoDBTable("Movies")]
 	public class Movie

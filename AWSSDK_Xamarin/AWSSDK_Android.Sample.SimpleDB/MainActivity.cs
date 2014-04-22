@@ -8,9 +8,9 @@ using Android.OS;
 using Amazon.SimpleDB;
 
 // http://aws.amazon.com/articles/SDKs/iOS/8829919029640036
-namespace AWSSDK_Android.Sample.SimpleDB
+namespace SimpleDB.Sample
 {
-	[Activity (Label = "AWSSDK_Android.Sample.SimpleDB", MainLauncher = true)]
+	[Activity (Label = "SimpleDB.Sample", MainLauncher = true)]
 	public class MainActivity : Activity
 	{
 		const string ACCESS_KEY = "";

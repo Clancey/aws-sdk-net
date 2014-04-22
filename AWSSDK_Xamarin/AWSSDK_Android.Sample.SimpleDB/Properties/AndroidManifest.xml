@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="AWSSDK_Android.Sample.SimpleDB">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="SimpleDB.Sample">
 	<uses-sdk />
-	<application android:label="AWSSDK_Android.Sample.SimpleDB">
+	<application android:label="SimpleDB.Sample">
 	</application>
 </manifest>

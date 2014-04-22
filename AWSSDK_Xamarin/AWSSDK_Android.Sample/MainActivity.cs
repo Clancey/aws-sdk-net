@@ -4,13 +4,13 @@ using Android.App;
 using Android.Content;
 using Android.Runtime;
 using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 using Amazon.SimpleNotificationService;
 using Amazon.SimpleNotificationService.Model;
+using Android.Widget;
 
-namespace SNSExample
+namespace SNS.Sample
 {
 	[Activity(Label = "SNS Example", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
@@ -21,11 +21,11 @@ namespace SNSExample
 		string topicName;
 		string topicArn;
 
-		Android.Widget.Button createTopic;
-		Android.Widget.Button subscribe;
-		Android.Widget.Button deleteTopic;
-		Android.Widget.EditText emailText;
-		Android.Widget.TextView statusText;
+		Button createTopic;
+		Button subscribe;
+		Button deleteTopic;
+		EditText emailText;
+		TextView statusText;
 
 		IAmazonSimpleNotificationService snsClient = new AmazonSimpleNotificationServiceClient(ACCESS_KEY, SECRET_KEY, Amazon.RegionEndpoint.USWest1);
 
@@ -50,32 +50,32 @@ namespace SNSExample
 			base.OnCreate(bundle);
 
 			// Create your application here
-			Android.Widget.GridLayout layout = new Android.Widget.GridLayout(this);
+			GridLayout layout = new GridLayout(this);
 			layout.ColumnCount = 1;
 			layout.RowCount = 5;
 
-			createTopic = new Android.Widget.Button(this);
+			createTopic = new Button(this);
 			createTopic.Text = "Create Topic";
 			createTopic.Click += createTopic_Click;
 			layout.AddView(createTopic);
 
-			emailText = new Android.Widget.EditText(this);
+			emailText = new EditText(this);
 			emailText.Text = "";
 			layout.AddView(emailText);
 
-			subscribe = new Android.Widget.Button(this);
+			subscribe = new Button(this);
 			subscribe.Enabled = false;
 			subscribe.Text = "Subscribe to Topic";
 			subscribe.Click += subscribe_Click;
 			layout.AddView(subscribe);
 
-			deleteTopic = new Android.Widget.Button(this);
+			deleteTopic = new Button(this);
 			deleteTopic.Click += deleteTopic_Click;
 			deleteTopic.Enabled = false;
 			deleteTopic.Text = "Delete Topic";
 			layout.AddView(deleteTopic);
 
-			statusText = new Android.Widget.TextView(this);
+			statusText = new TextView(this);
 			layout.AddView(statusText);
 
 

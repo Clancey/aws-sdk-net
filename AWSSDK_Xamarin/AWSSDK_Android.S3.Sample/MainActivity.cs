@@ -2,18 +2,17 @@
 
 using Android.App;
 using Android.Content;
+using Android.Net;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-
-using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.S3.Util;
 
-namespace S3Example
+namespace S3.Sample
 {
-	[Activity(Label = "S3 Example", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity(Label = "S3.Sample", MainLauncher = true, Icon = "@drawable/icon")]
 	public class S3Example : Activity
 	{
 		private const int SELECT_PICTURE = 1;
@@ -23,13 +22,13 @@ namespace S3Example
 
 		string bucketName;
 
-		Android.Widget.Button createButton;
-		Android.Widget.Button uploadButton;
-		Android.Widget.Button deleteButton;
-		Android.Widget.TextView statusText;
-		Android.Widget.ProgressBar progressBar;
+		Button createButton;
+		Button uploadButton;
+		Button deleteButton;
+		TextView statusText;
+		ProgressBar progressBar;
 
-		IAmazonS3 s3Client = new AmazonS3Client(ACCESS_KEY, SECRET_KEY, Amazon.RegionEndpoint.USWest1);
+		Amazon.S3.IAmazonS3 s3Client = new Amazon.S3.AmazonS3Client(ACCESS_KEY, SECRET_KEY, Amazon.RegionEndpoint.USWest1);
 
 		protected override void OnSaveInstanceState(Bundle outState)
 		{
@@ -50,31 +49,31 @@ namespace S3Example
 			base.OnCreate(bundle);
 
 			// Create your application here
-			Android.Widget.GridLayout layout = new Android.Widget.GridLayout(this);
+			GridLayout layout = new GridLayout(this);
 			layout.ColumnCount = 1;
 			layout.RowCount = 5;
 
-			createButton = new Android.Widget.Button(this);
+			createButton = new Button(this);
 			createButton.Text = "Create Bucket";
 			createButton.Click += createButton_Click;
 			layout.AddView(createButton);
 
-			uploadButton = new Android.Widget.Button(this);
+			uploadButton = new Button(this);
 			uploadButton.Text = "Upload Image";
 			uploadButton.Click += uploadButton_Click;
 			uploadButton.Enabled = false;
 			layout.AddView(uploadButton);
 
-			deleteButton = new Android.Widget.Button(this);
+			deleteButton = new Button(this);
 			deleteButton.Text = "Delete Bucket";
 			deleteButton.Click += deleteButton_Click;
 			deleteButton.Enabled = false;
 			layout.AddView(deleteButton);
 
-			statusText = new Android.Widget.TextView(this);
+			statusText = new TextView(this);
 			layout.AddView(statusText);
 
-			progressBar = new Android.Widget.ProgressBar(this);
+			progressBar = new ProgressBar(this);
 			progressBar.Visibility = ViewStates.Invisible;
 
 			layout.AddView(progressBar);
