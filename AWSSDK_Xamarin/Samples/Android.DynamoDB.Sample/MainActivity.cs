@@ -11,8 +11,6 @@ using Amazon.DynamoDBv2.DataModel;
 using Amazon.DynamoDBv2;
 using System.Collections;
 using Amazon.DynamoDBv2.DocumentModel;
-using Amazon.DynamoDBv2;
-
 
 namespace DynamoDB.Sample
 {
