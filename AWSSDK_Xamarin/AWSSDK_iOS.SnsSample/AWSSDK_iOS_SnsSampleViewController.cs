@@ -83,7 +83,7 @@ namespace AWSSDK_iOS.SnsSample
 		{
 			try
 			{
-				_topicName = "ZamarinTopic" + DateTime.Now.Ticks;
+				_topicName = "XamarinTopic" + DateTime.Now.Ticks;
 				var response = await snsClient.CreateTopicAsync(new CreateTopicRequest() { Name = _topicName });
 				_topicArn = response.TopicArn;
 

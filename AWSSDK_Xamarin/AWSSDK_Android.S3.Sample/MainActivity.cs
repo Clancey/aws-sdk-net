@@ -77,9 +77,7 @@ namespace S3Example
 			progressBar = new Android.Widget.ProgressBar(this);
 			progressBar.Visibility = ViewStates.Invisible;
 
-
 			layout.AddView(progressBar);
-
 
 			SetContentView(layout);
 		}
@@ -127,23 +125,20 @@ namespace S3Example
 		{
 			try
 			{
-				if (resultCode == Result.Ok)
+				if (resultCode == Result.Ok && requestCode == SELECT_PICTURE)
 				{
-					if (requestCode == SELECT_PICTURE)
+					var selectedImageUri = data.Data;
+					string path = GetPathToImage(selectedImageUri);
+					PutObjectRequest request = new PutObjectRequest()
 					{
-						var selectedImageUri = data.Data;
-						string path = GetPathToImage(selectedImageUri);
-						PutObjectRequest request = new PutObjectRequest()
-						{
-							BucketName = this.bucketName,
-							FilePath = path
-						};
+						BucketName = this.bucketName,
+						FilePath = path
+					};
 
-						progressBar.Visibility = ViewStates.Visible;
-						await this.s3Client.PutObjectAsync(request);
+					progressBar.Visibility = ViewStates.Visible;
+					await this.s3Client.PutObjectAsync(request);
 
-						this.statusText.Text = string.Format("Uploaded {0}", path);
-					}
+					this.statusText.Text = string.Format("Uploaded {0}", path);
 				}
 			}
 			catch (Exception e)

@@ -86,7 +86,7 @@ namespace SNSExample
 		{
 			try
 			{
-				topicName = "ZamarinTopic" + DateTime.Now.Ticks;
+				topicName = "XamarinTopic" + DateTime.Now.Ticks;
 				var response = await snsClient.CreateTopicAsync(new CreateTopicRequest() { Name = topicName });
 				topicArn = response.TopicArn;
 
