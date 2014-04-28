@@ -2,6 +2,9 @@
 using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Amazon.CloudWatch;
+using Amazon.CloudWatch.Model;
+using System.Collections.Generic;
 
 namespace CloudWatch.Sample
 {
@@ -11,19 +14,32 @@ namespace CloudWatch.Sample
 		{
 		}
 
-		public override void DidReceiveMemoryWarning ()
-		{
-			// Releases the view if it doesn't have a superview.
-			base.DidReceiveMemoryWarning ();
-			
-			// Release any cached data, images, etc that aren't in use.
-		}
-
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
-			// Perform any additional setup after loading the view, typically from a nib.
+			const string ACCESS_KEY = "";
+			const string SECRET_KEY = "";
+			IAmazonCloudWatch cw = Amazon.AWSClientFactory.CreateAmazonCloudWatchClient (ACCESS_KEY, SECRET_KEY, Amazon.RegionEndpoint.USWest1);
+
+			string measureName = "CPUUtilization";
+
+			GetMetricStatisticsRequest request = new GetMetricStatisticsRequest ();
+			request.StartTime = DateTime.Now.AddDays (-1);
+			request.Namespace = "AWS/EC2";
+			request.Period = 5 * 60;
+			var dimensions = new Dimension ();
+			dimensions.Name = "InstanceType";
+			dimensions.Value = "t1.micro";
+			request.Dimensions = new List<Dimension>{ dimensions };
+			request.MetricName = measureName;
+			request.Statistics = new List<string>{"Average", "Maximum", "Minimum"};
+			request.EndTime = DateTime.Now;
+
+			List<Datapoint> datapoints = cw.GetMetricStatistics(request).Datapoints;
+			foreach (Datapoint point in datapoints)
+			{
+				Console.WriteLine("Min:{0} Max:{1} Average:{3} Unit: {4}", point.Minimum, point.Maximum, point.Average, point.Unit);
+			}
 		}
 	}
 }

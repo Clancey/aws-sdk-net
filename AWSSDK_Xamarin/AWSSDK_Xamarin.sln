@@ -271,6 +271,6 @@ Global
 		{BB7F9F76-841A-49F5-BF9F-EC8D08826CF1} = {E51610F5-3268-4FCD-9959-A43DAD69EC9E}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = AWSSDK_iOS.csproj
+		StartupItem = Samples\iOS\CloudWatch.Sample\CloudWatch.Sample.csproj
 	EndGlobalSection
 EndGlobal
