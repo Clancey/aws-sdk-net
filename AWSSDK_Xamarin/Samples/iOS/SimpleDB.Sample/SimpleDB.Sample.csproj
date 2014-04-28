@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{30142C5A-4CC6-4B43-AAFA-E5378C9C34E3}</ProjectGuid>
+    <ProjectGuid>{A8CD3DB6-B798-4830-8E9D-A65140F45A91}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>S3.Sample</RootNamespace>
+    <RootNamespace>SimpleDB.Sample</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
@@ -23,7 +23,7 @@
     <MtouchLink>None</MtouchLink>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchDebug>true</MtouchDebug>
-    <AssemblyName>S3Sample</AssemblyName>
+    <AssemblyName>SimpleDBSample</AssemblyName>
     <MtouchI18n>
     </MtouchI18n>
     <MtouchArch>ARMv7</MtouchArch>
@@ -38,7 +38,7 @@
     <MtouchLink>None</MtouchLink>
     <ConsolePause>false</ConsolePause>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <AssemblyName>S3Sample</AssemblyName>
+    <AssemblyName>AWSSDK_iOSSampleSimpleDB</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,7 +52,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <AssemblyName>S3.Sample</AssemblyName>
+    <AssemblyName>SimpleDB.Sample</AssemblyName>
     <IpaPackageName>
     </IpaPackageName>
     <MtouchI18n>
@@ -69,7 +69,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <AssemblyName>AWSSDK_iOSS3Sample</AssemblyName>
+    <AssemblyName>SimpleDB.Sample</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>full</DebugType>
@@ -83,7 +83,7 @@
     <BuildIpa>true</BuildIpa>
     <CodesignProvision>Automatic:AdHoc</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
-    <AssemblyName>AWSSDK_iOSS3Sample</AssemblyName>
+    <AssemblyName>SimpleDB.Sample</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>full</DebugType>
@@ -96,7 +96,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
-    <AssemblyName>AWSSDK_iOSS3Sample</AssemblyName>
+    <AssemblyName>SimpleDB.Sample</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -114,17 +114,17 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="S3SampleViewController.cs" />
-    <Compile Include="S3SampleViewController.designer.cs">
-      <DependentUpon>S3SampleViewController.cs</DependentUpon>
+    <Compile Include="SimpleDBSampleViewController.cs" />
+    <Compile Include="SimpleDBSampleViewController.designer.cs">
+      <DependentUpon>SimpleDBSampleViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="S3SampleViewController.xib" />
+    <InterfaceDefinition Include="SimpleDBSampleViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\AWSSDK_iOS.csproj">
+    <ProjectReference Include="..\..\..\AWSSDK_iOS.csproj">
       <Project>{30B51135-B4D3-4BF0-9E32-E3E2F5BBE6F5}</Project>
       <Name>AWSSDK_iOS</Name>
     </ProjectReference>

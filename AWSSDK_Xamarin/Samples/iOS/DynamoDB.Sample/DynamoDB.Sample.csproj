@@ -119,7 +119,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\AWSSDK_iOS.csproj">
+    <ProjectReference Include="..\..\..\AWSSDK_iOS.csproj">
       <Project>{30B51135-B4D3-4BF0-9E32-E3E2F5BBE6F5}</Project>
       <Name>AWSSDK_iOS</Name>
     </ProjectReference>
