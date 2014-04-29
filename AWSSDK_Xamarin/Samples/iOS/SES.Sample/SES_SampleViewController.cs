@@ -16,7 +16,6 @@ namespace SES.Sample
 		{
 			base.ViewDidLoad ();
 			SubmitButton.TouchUpInside += HandleTouchUpInside;
-			Comments.ReturnKeyType = UIReturnKeyType.Go;
 		}
 
 		public override void TouchesBegan (NSSet touches, UIEvent evt)
@@ -34,7 +33,7 @@ namespace SES.Sample
 
 			AmazonSimpleEmailServiceClient sesClient = new Amazon.SimpleEmail.AmazonSimpleEmailServiceClient (ACCESS_KEY, SECRET_KEY, Amazon.RegionEndpoint.USEast1);
 
-			var messageBody = new Amazon.SimpleEmail.Model.Content (String.Format("Rating: {0}\\nComments:\\n{1}", Rating.SelectedSegment, Comments.Text));
+			var messageBody = new Amazon.SimpleEmail.Model.Content (String.Format("Rating: {0}\n\nComments:\n{1}", Rating.SelectedSegment, Comments.Text));
 			var body = new Amazon.SimpleEmail.Model.Body (messageBody);
 			var subject = new Amazon.SimpleEmail.Model.Content (String.Format ("Feedback from {0}", Name.Text));
 
@@ -43,8 +42,7 @@ namespace SES.Sample
 
 			var sendEmailRequest = new Amazon.SimpleEmail.Model.SendEmailRequest (YOUR_EMAIL, destination, message);
 
-			var sendEmailResponse = sesClient.SendEmail (sendEmailRequest);
-			Comments.Text = sendEmailResponse.ResponseMetadata.Metadata.Values.Count.ToString();
+			sesClient.SendEmail (sendEmailRequest);
 		}
 	}
 }
