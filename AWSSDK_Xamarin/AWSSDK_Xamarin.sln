@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSSDK_iOS", "AWSSDK_iOS.csproj", "{30B51135-B4D3-4BF0-9E32-E3E2F5BBE6F5}"
@@ -36,9 +36,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudWatch.Sample", "Sample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSSDK_iOS.EC2.Sample", "AWSSDK_iOS.EC2.Sample\AWSSDK_iOS.EC2.Sample.csproj", "{BB7F9F76-841A-49F5-BF9F-EC8D08826CF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinesis.Sample", "Samples\iOS\Kinesis.Sample\Kinesis.Sample.csproj", "{375C123D-4B83-48F1-AA94-9FD2B51BF031}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SES.Sample", "Samples\iOS\SES.Sample\SES.Sample.csproj", "{0DEA4B44-F49F-498C-B983-9A7815AD5687}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinesis.Sample", "Samples\iOS\Kinesis.Sample\Kinesis.Sample.csproj", "{375C123D-4B83-48F1-AA94-9FD2B51BF031}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -325,6 +325,7 @@ Global
 		{83E8D975-0AC6-49B7-82E9-BBE0EFDC49FD} = {E51610F5-3268-4FCD-9959-A43DAD69EC9E}
 		{BB7F9F76-841A-49F5-BF9F-EC8D08826CF1} = {E51610F5-3268-4FCD-9959-A43DAD69EC9E}
 		{0DEA4B44-F49F-498C-B983-9A7815AD5687} = {E51610F5-3268-4FCD-9959-A43DAD69EC9E}
+		{375C123D-4B83-48F1-AA94-9FD2B51BF031} = {E51610F5-3268-4FCD-9959-A43DAD69EC9E}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Samples\iOS\SES.Sample\SES.Sample.csproj
