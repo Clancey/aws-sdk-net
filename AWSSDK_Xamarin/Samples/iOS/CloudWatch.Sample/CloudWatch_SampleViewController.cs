@@ -17,6 +17,11 @@ namespace CloudWatch.Sample
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			GetCloudWatchData.TouchUpInside += HandleTouchUpInside;
+		}
+
+		void HandleTouchUpInside (object sender, EventArgs e)
+		{
 			const string ACCESS_KEY = "";
 			const string SECRET_KEY = "";
 			IAmazonCloudWatch cw = Amazon.AWSClientFactory.CreateAmazonCloudWatchClient (ACCESS_KEY, SECRET_KEY, Amazon.RegionEndpoint.USWest1);
@@ -36,10 +41,11 @@ namespace CloudWatch.Sample
 			request.EndTime = DateTime.Now;
 
 			List<Datapoint> datapoints = cw.GetMetricStatistics(request).Datapoints;
-			foreach (Datapoint point in datapoints)
-			{
-				Console.WriteLine("Min:{0} Max:{1} Average:{3} Unit: {4}", point.Minimum, point.Maximum, point.Average, point.Unit);
-			}
+			datapoints.ForEach(d => 
+				this.View.Add(new UILabel(){
+					Text = String.Format("Min: {0} Max: {1} Average: {3} Unit: {4}\n", d.Minimum, d.Maximum, d.Average, d.Unit), 
+					Frame = (new RectangleF(20, 40*datapoints.FindIndex(dp => dp==d), 280, 21))
+				}));
 		}
 	}
 }
