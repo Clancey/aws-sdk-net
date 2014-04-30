@@ -385,6 +385,6 @@ Global
 		{F24F2976-D699-4074-BE87-3E866FDA13E8} = {E51610F5-3268-4FCD-9959-A43DAD69EC9E}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Samples\iOS\LoadBalancing.Sample\LoadBalancing.Sample.csproj
+		StartupItem = Samples\Android\AWSSDK_Android.LoadBalancing.Sample\AWSSDK_Android.LoadBalancing.Sample.csproj
 	EndGlobalSection
 EndGlobal

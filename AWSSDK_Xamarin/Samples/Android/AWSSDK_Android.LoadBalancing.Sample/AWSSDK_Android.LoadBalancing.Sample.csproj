@@ -60,4 +60,10 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\AWSSDK_Android.csproj">
+      <Project>{078E8F40-8259-4C39-9CDC-8AC2F4A0BE3A}</Project>
+      <Name>AWSSDK_Android</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
