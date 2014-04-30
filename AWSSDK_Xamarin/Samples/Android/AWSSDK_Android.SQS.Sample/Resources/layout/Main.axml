@@ -5,10 +5,14 @@
     android:layout_height="fill_parent"
     >
 <Button  
-    android:id="@+id/myButton"
+    android:id="@+id/createQueue"
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
-    android:text="@string/hello"
+    android:text="@string/createQueue"
     />
+<EditText android:id="@+id/createQueueResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/createQueueResult" />
 </LinearLayout>
 

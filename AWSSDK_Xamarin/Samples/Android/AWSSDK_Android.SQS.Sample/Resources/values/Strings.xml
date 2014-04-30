@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Hello World, Click Me!</string>
+	<string name="createQueue">Create queue</string>
+	<string name="createQueueResult"></string>
 	<string name="app_name">AWSSDK_Android.SQS.Sample</string>
 </resources>

@@ -18,10 +18,13 @@ namespace SQS.Sample
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			var sqsClient = new Amazon.SQS.AmazonSQSClient (ACCESS_KEY, SECRET_KEY, Amazon.RegionEndpoint.EUWest1);
-			var request = new Amazon.SQS.Model.CreateQueueRequest ();
-			request.QueueName = "newQueue";
-			var response = sqsClient.CreateQueue (request);
+			CreateQueue.TouchUpInside += delegate(object sender, EventArgs e) {			
+				var sqsClient = new Amazon.SQS.AmazonSQSClient (ACCESS_KEY, SECRET_KEY, Amazon.RegionEndpoint.EUWest1);
+				var request = new Amazon.SQS.Model.CreateQueueRequest ();
+				request.QueueName = "newQueue";
+				var response = sqsClient.CreateQueue (request);
+				CreateQueueResults.Text = String.Format("Queue created at {0}.", response.QueueUrl);
+			};
 		}
 	}
 }
