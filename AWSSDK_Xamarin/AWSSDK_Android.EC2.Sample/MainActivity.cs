@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.OS;
 using Amazon.EC2;
 using Amazon.Runtime;
+using Amazon.AutoScaling;
 
 namespace AWSSDK_Android.EC2.Sample
 {
