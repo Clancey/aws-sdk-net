@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="getcloudwatchdata">Get CloudWatch Data</string>
+	<string name="cloudwatchdata"></string>
+	<string name="app_name">AWSSDK_Android.CloudWatch.Sample</string>
+</resources>
