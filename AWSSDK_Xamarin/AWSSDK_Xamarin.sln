@@ -519,7 +519,4 @@ Global
 		{EED4D361-A5FA-4DA9-AE1D-27B32265E22B} = {E51610F5-3268-4FCD-9959-A43DAD69EC9E}
 		{DAF0FF64-D5AE-4240-8D6F-6B76B0574EAF} = {E51610F5-3268-4FCD-9959-A43DAD69EC9E}
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Samples\iOS\SQS.Sample\SQS.Sample.csproj
-	EndGlobalSection
 EndGlobal
