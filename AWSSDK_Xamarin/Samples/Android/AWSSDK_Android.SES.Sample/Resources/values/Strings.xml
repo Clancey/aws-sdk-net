@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">AWSSDK_Android.SES.Sample</string>
+	<string name="name">Name: </string>
+	<string name="comments">Comments: </string>
+	<string name="submit">Submit: </string>
+</resources>

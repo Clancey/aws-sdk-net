@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">AWSSDK_Android.LoadBalancing.Sample</string>
+	<string name="status"></string>
+	<string name="buttontext">Create new load balancer.</string>
+</resources>
